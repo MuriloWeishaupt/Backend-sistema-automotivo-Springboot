@@ -41,6 +41,18 @@ public class VeiculoController {
         veiculoService.removerVeiculo(id);
     }
 
+@GetMapping("/filtrar")
+    public List<Veiculo> filtrarVeiculo(
+            @RequestParam(required = false) String marca,
+            @RequestParam(required = false) String modelo,
+            @RequestParam(required = false) String placa,
+            @RequestParam(required = false) Integer ano,
+            @RequestParam(required = false) Double precoMax,
+            @RequestParam(required = false) String status
+) {
+        return veiculoService.filtrarVeiculo(marca, modelo, placa, ano, precoMax, status);
+}
+
 
 
 

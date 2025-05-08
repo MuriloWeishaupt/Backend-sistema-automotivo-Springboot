@@ -40,4 +40,8 @@ public class VeiculoService {
         veiculoRepository.deleteById(id);
     }
 
+    public List<Veiculo> filtrarVeiculo(String marca, String modelo, String placa, Integer ano, Double precoMax, String status) {
+        return veiculoRepository.filtrarVeiculos(marca, modelo, placa, ano, precoMax, status);
+    }
+
 }
