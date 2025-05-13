@@ -20,7 +20,7 @@ public class VeiculoService {
     }
 
     public List<Veiculo> listarVeiculos() {
-        return veiculoRepository.findAll();
+        return veiculoRepository.filtrarVeiculos(null, null, null, null, null, null);
     }
 
     public Optional<Veiculo> buscarVeiculoPorId(Long id) {
