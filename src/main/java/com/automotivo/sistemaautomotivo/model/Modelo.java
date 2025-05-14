@@ -1,5 +1,6 @@
 package com.automotivo.sistemaautomotivo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,6 +13,7 @@ public class Modelo {
 
     @ManyToOne
     @JoinColumn(name = "marca_id")
+//    @JsonIgnoreProperties("modelos")
     private Marca marca;
 
     public long getId() {

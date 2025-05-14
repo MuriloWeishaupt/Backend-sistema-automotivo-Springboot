@@ -1,5 +1,6 @@
 package com.automotivo.sistemaautomotivo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 @Entity
